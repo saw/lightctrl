@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  h1= title
+  form.colors
+    p
+      label(for="red") Red
+      <input type="range" min="0" max="15" value="3" id="red">
+    p
+      label(for="green") Green
+      <input type="range" min="0" max="15" value="3" id="green">
+    p
+      label(for="blue") Blue
+      <input type="range" min="0" max="15" value="3" id="blue">
+  form.buttons
+    p
+      button#off(name="Off") Off
+      button#wave(name="Wave") Color Wave
