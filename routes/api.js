@@ -13,6 +13,13 @@ router.post('/setcolor/:color', function(req, res, next) {
 	res.end('OK');
 });
 
+router.post('/setcolorset/:set/:color', function(req, res, next) {
+	var color = req.params.color;
+	var set = req.params.set;
+	api.setColorSet(set, color);
+	res.end('OK');
+});
+
 router.post('/colorwave', function(req, res, next) {
 	api.colorWave();
 	res.end('OK');

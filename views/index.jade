@@ -2,6 +2,7 @@ extends layout
 
 block content
   h1= title
+  div.swatch
   form.colors
     p
       label(for="red") Red
@@ -12,6 +13,11 @@ block content
     p
       label(for="blue") Blue
       <input type="range" min="0" max="15" value="3" id="blue">
+    p
+      label(for="set") Set
+      select(name="set", id="set")
+        each val in ['all', 0,1,2,3,4,5,6,7,8,9,10,11,12]
+          option=val
   form.buttons
     p
       button#off(name="Off") Off
